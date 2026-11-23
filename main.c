@@ -12,9 +12,10 @@ struct joueur {
 	struct carte main[108];
 	int nbCartes;
 	int estHumain;
-};
+} ;
 
 struct joueur joueurs[4];
+
 int indexPioche = 0;
 struct carte carteActuelle;
 int couleurActuelle;
@@ -34,11 +35,12 @@ void cartes() {
 		}
 	}
 	for (int couleur = 0; couleur <= 3; couleur++) {
-		jeucarte[index] = (struct carte) {couleur, 0, 0};
-		index = index + 1; 
+			jeucarte[index] = (struct carte){couleur, 0, 0 };
+			index = index + 1;
+		}
 
 // type : 0 = normal 1 = +2, 2 = inversion, 3 = passer, 4 = joker, 5= +4
-	}
+	
 	for (int exemplaire = 0; exemplaire <= 1; exemplaire++) {
 		for (int couleur = 0; couleur <= 3; couleur++) {
 			for (int type = 1; type <= 3; type++) {
@@ -53,6 +55,7 @@ void cartes() {
 			index = index + 1;
 		}
 	}
+	printf(index);
 }
 
 void melanger() {
